@@ -1,0 +1,7 @@
+{
+  "name": "issue-ion-nav-spec",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
