@@ -1,12 +1,10 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule, NavParams } from '@ionic/angular';
-
 import { NoModalCompComponent } from './no-modal-comp.component';
 import { IMyModel } from 'src/app/dto/imymodel';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { NoModalModule } from '../no-modal.module';
-import { CommonModule } from '@angular/common';
 
 describe('NoModalCompComponent', () => {
   const myModel: IMyModel = {
@@ -16,18 +14,19 @@ describe('NoModalCompComponent', () => {
     phoneNumber: '123-456-7891'
   };
   let component: NoModalCompComponent;
-  let debugElement: DebugElement;
   let fixture: ComponentFixture<NoModalCompComponent>;
+  let debugElement: DebugElement;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [ CommonModule, IonicModule, NoModalModule],
+      imports: [ IonicModule.forRoot(), NoModalModule],
       providers: [{provide: NavParams, useValue: new NavParams({ myModel })}]
     }).compileComponents();
 
     fixture = TestBed.createComponent(NoModalCompComponent);
     component = fixture.componentInstance;
     debugElement = fixture.debugElement;
+    // fixture.detectChanges();
   }));
 
   it('should create', () => {

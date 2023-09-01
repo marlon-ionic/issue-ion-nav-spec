@@ -7,15 +7,15 @@ import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
 describe('CompComponent', () => {
-  let component: CompComponent;
-  let fixture: ComponentFixture<CompComponent>;
-  let debugElement: DebugElement;
   const myModel: IMyModel = {
     code: 99,
     displayName: 'Test User',
     email: 'test-user@gmail.com',
     phoneNumber: '123-456-7891'
   };
+  let component: CompComponent;
+  let fixture: ComponentFixture<CompComponent>;
+  let debugElement: DebugElement;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
