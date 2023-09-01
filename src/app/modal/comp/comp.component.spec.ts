@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { IonicModule, NavParams } from '@ionic/angular';
+import { IonNav, IonicModule, NavParams } from '@ionic/angular';
 import { CompComponent } from './comp.component';
 import { ModalModule } from '../modal.module';
 import { IMyModel } from 'src/app/dto/imymodel';
@@ -20,7 +20,9 @@ describe('CompComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [IonicModule.forRoot(), ModalModule],
-      providers: [{provide: NavParams, useValue: new NavParams({ myModel })}]
+      providers: [
+        IonNav,
+        {provide: NavParams, useValue: new NavParams({ myModel })}]
     }).compileComponents();
 
     fixture = TestBed.createComponent(CompComponent);

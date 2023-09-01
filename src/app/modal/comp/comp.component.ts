@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavParams } from '@ionic/angular';
+import { IonNav, NavParams } from '@ionic/angular';
 import { IMyModel } from 'src/app/dto/imymodel';
 
 @Component({
@@ -10,7 +10,7 @@ import { IMyModel } from 'src/app/dto/imymodel';
 export class CompComponent  implements OnInit {
   myModel?: IMyModel;
 
-  constructor(private navParams: NavParams) { }
+  constructor(private navParams: NavParams, private nav: IonNav) { }
 
   ngOnInit() {
     this.myModel = this.navParams.get('myModel');
