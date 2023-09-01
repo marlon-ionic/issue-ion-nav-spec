@@ -34,7 +34,7 @@ describe('NoModalCompComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display name from mymodel', () => {
+  it('**should display name from navparams**', () => {
     fixture.detectChanges();
     const el = debugElement.query(By.css('[data-testid="mymodel-name"]'));
     expect(el.nativeElement.textContent).toEqual(myModel.displayName);
