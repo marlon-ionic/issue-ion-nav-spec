@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+.app-delayed-content__spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+
+  ion-spinner {
+    color: var(--ion-color-primary-contrast);
+  }
+}

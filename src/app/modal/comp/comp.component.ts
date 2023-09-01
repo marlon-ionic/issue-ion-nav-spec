@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavParams } from '@ionic/angular';
+import { IMyModel } from 'src/app/dto/imymodel';
 
 @Component({
   selector: 'app-comp',
@@ -6,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comp.component.scss'],
 })
 export class CompComponent  implements OnInit {
+  myModel?: IMyModel;
 
-  constructor() { }
+  constructor(private navParams: NavParams) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.myModel = this.navParams.get('myModel');
+  }
 
 }
